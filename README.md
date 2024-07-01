@@ -23,17 +23,24 @@ Output
 
 ### To compile the C code
 ```bash
-foo@bar$ gcc sudokount.c -o sudokount
+gcc sudokount.c -o sudokount
 ```
 ### To compile and run the rust code first [install rust](https://www.rust-lang.org/tools/install) and then
 
 ```bash
-foo@bar$ cargo run < input/sudokount1.in
+cargo run < input/sudokount1.in
 ```
 
 ### To check the solution with the sequential C code
 ```bash
-foo@bar$ ./sudokount < input/sudokount1.c
+./sudokount < input/sudokount1.c
 ```
 
 ### Currently only [sudokount1.in](./input/sudokount1.in) file gives the solution within feasible time
+
+### *[Update]* Concurrent solution with [golang](./src/main.go) runs flawlessly. To compile and run
+
+```console
+bash compile.sh
+./target/sudokount_go < input/judge.in
+```
